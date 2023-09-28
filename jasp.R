@@ -10,9 +10,11 @@
 #' @return a spark-line plot with transparent colours
 #' @export
 #'
-#' @examples the_spark_plot(dat=data, trans = 0.3, colo = "red", label_x = "Data point", label_y = "Value", the_title = "Sparkline Plot")
+#' @examples dat <- data.frame(x = 1:100, y = rnorm(100), z = rnorm(100) + 2)
+#'           the_spark_plot(dat=dat, trans = 0.3, colo = "red", label_x = "Data point", label_y = "Value", the_title = "Sparkline Plot")
 #' 
 the_spark_plot <- function(dat, trans, colo, label_x, label_y, the_title ){
+  num_columns <- ncol(dat)
   plot(1, type = "n", xlim = c(1, nrow(dat)), ylim = c(0, max(dat)), xlab = label_x, ylab = label_y, xaxt = "n")
   
   # Plot the first column (X1) as a normal blue line
