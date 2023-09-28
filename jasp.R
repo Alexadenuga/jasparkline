@@ -19,7 +19,7 @@ the_spark_plot <- function(dat, trans, colo, label_x, label_y, the_title ){
   lines(1:nrow(dat), dat[, 1], col = colo)
   
   # Plot the remaining columns as transparent blue lines
-  for (i in 2:num_columns) {
+  for (i in 2:ncol(dat)) {
     lines(1:nrow(dat), dat[, i], col = rgb(1, 0, 0, alpha = trans))
   }
   
