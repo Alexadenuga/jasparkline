@@ -1,4 +1,4 @@
-#' Just A Spark-line plot function
+#' Just Another Spark-line plot function
 #'
 #' @param dat 
 #' @param trans 
